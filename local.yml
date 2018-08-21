@@ -3,5 +3,5 @@
   tasks:
   - name: Install htop
     yum: name=htop
-#  - name: Install vim
-#    yum: name=vim
+  - name: Install vim
+    yum: name=vim
