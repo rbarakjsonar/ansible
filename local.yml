@@ -1,7 +1,10 @@
 - hosts: localhost
   become: true
   tasks:
-  - name: Install htop
-    yum: name=htop
-  - name: Install vim
-    yum: name=vim
+  - name: Install packages
+    yum: name={{item}}
+    with_items:
+    - vim
+    - htop
+    - mc
+    - byobu
