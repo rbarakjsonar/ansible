@@ -1,3 +1,4 @@
 - name: Clear the way for yum and get password to sudo’s cache
-  shell: sudo kill -1 `ps -ef | egrep 'rpm|yum' | grep -v 'grep' | \
+  become: yes
+  shell: kill -1 `ps -ef | egrep 'rpm|yum' | grep -v 'grep' | \
          awk '{ print $2 }'`
