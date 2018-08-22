@@ -1,0 +1,16 @@
+- hosts: localhost
+  become: true
+  pre_tasks:
+    - name: update repositories
+      yum:
+        name: '*'
+        state: latest
+        update_cache: yes
+      changed_when: False
+
+  tasks:
+    - include: tasks/kill_running_yum_rpm_processes.yml
+#    - include: tasks/users.yml
+#    - include: tasks/cron.yml
+#    - include: tasks/packages.yml
+#    - include: tasks/gnome.yml
