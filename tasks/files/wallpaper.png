@@ -1,0 +1,11 @@
+--2018-08-22 14:17:17--  https://www.ansible.com/hs-fs/hubfs/2016_Images/Overview/ansible-devops-thumb-2.png
+Resolving www.ansible.com (www.ansible.com)... 104.17.114.180, 104.17.113.180, 104.17.112.180, ...
+Connecting to www.ansible.com (www.ansible.com)|104.17.114.180|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 8862 (8.7K) [image/png]
+Saving to: ‘ansible-devops-thumb-2.png’
+
+     0K ........                                              100% 6.00M=0.001s
+
+2018-08-22 14:17:17 (6.00 MB/s) - ‘ansible-devops-thumb-2.png’ saved [8862/8862]
+

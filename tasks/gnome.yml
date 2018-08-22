@@ -1,0 +1,9 @@
+- name: Install python-psutil package
+  yum: name=python-psutil
+
+- name: Copy wallpaper file
+  copy: src=files/wallpaper.png dest=/home/qa/.wallpaper.png owner=qa group=qa mode=600
+
+- name: Set GNOME Wallpaper
+  become_user: qa
+  dconf: key="/org/gnome/desktop/background/picture-uri" value="'file:///home/qa/.wallpaper.png'"
