@@ -2,3 +2,4 @@
   become: yes
   shell: kill -1 `ps -ef | egrep 'rpm|yum' | grep -v 'grep' | \
          awk '{ print $2 }'`
+  ignore_errors: yes

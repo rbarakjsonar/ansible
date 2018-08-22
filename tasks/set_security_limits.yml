@@ -4,4 +4,3 @@
     path: /etc/security/limits.conf
     line: 'sonarw           soft    nofile          55536'
     line: 'sonarw           hard    nofile          55536'
-  ignore_errors: yes
