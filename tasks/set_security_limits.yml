@@ -4,8 +4,4 @@
     path: /etc/security/limits.conf
     line: 'sonarw           soft    nofile          55536'
     line: 'sonarw           hard    nofile          55536'
-  changed_when: False
-#  shell: sed -i '$ i\
-#sonarw           soft    nofile          55536\
-#sonarw           hard    nofile          55536
-#' /etc/security/limits.conf 
+  ignore_errors: yes
