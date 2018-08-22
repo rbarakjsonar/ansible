@@ -6,4 +6,8 @@
 
 - name: Set GNOME Wallpaper
   become_user: qa
-  dconf: key="/org/gnome/desktop/background/picture-uri" value="'file:///home/qa/.wallpaper.png'"
+  shell: gsettings set org.gnome.desktop.background \
+         picture-uri 'file:///home/qa/.wallpaper.png'
+  # dconf: key="/org/gnome/desktop/background/picture-uri" value="'file:///home/qa/.wallpaper.png'"
+# gsettings set org.gnome.desktop.background picture-uri file:///home/serrano/Pictures/y.jpg
+#
