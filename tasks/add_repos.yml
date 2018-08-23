@@ -1,0 +1,31 @@
+- name: Add sonarg needed repos
+  copy: src=files/{{repo}} dest=/etc/yum.repos.d/{{repo}} \
+        owner=root group=root mode=644
+  with_items:
+    - intel-daal.repo
+    - intel-mkl.repo
+    - jsonar.repo
+    - mongodb-org-3.6.repo
+    - rsyslog.repo
+  become: yes
+#rb#
+#rb#- name: Set GNOME Wallpaper
+#rb#  become_user: qa
+#rb#  gsetting: user=qa \
+#rb#            key=org.gnome.desktop.background.picture-uri \
+#rb#            value="'file:///home/qa/.wallpaper.png'"
+#rb#  # dconf: key="/org/gnome/desktop/background/picture-uri" value="'file:///home/qa/.wallpaper.png'"
+#rb## gsettings set org.gnome.desktop.background picture-uri file:///home/serrano/Pictures/y.jpg
+#rb##
+#rb##
+#rb##-------------
+#rb#- name: set sonarw soft and hard number of files limit
+#rb#  lineinfile:
+#rb#    dest=/etc/security/limits.conf
+#rb#    line='{{ item }}'
+#rb#    state=present
+#rb#  with_items:
+#rb#    - 'sonarw           soft    nofile          55536'
+#rb#    - 'sonarw           hard    nofile          55536'
+#rb#  become: yes
+#rb#
