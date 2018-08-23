@@ -1,0 +1,12 @@
+- name: define variables
+  set_fact:
+  epel_release_major_version: 7
+  #epel_release_minor_version: 8
+
+- name: add epel repo
+    yum_repository:
+      name: epel_repo
+      description: EPEL YUM repo
+      baseurl:  
+        #https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+        https://dl.fedoraproject.org/pub/epel/{{epel_release_major_version}}/x86_64/
