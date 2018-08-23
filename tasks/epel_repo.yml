@@ -1,13 +1,19 @@
-- name: define EPEL variables
-  set_fact:
-    epel_release_major_version: 7
-    #epel_release_minor_version: 8
+#rb#- name: define EPEL variables
+#rb#  set_fact:
+#rb#    epel_release_major_version: 7
+#rb#    #epel_release_minor_version: 8
+#rb#
+#rb#- name: add epel repo
+#rb#  yum_repository:
+#rb#    name: epel_repo
+#rb#    description: EPEL YUM repo
+#rb#    baseurl:  
+#rb#      #https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+#rb#      #http://dl.fedoraproject.org/pub/epel/epel-release-latest-{{epel_release_major_version}}.noarch.rpm
+#rb#      https://download.fedoraproject.org/pub/epel/{{epel_release_major_version}}/x86_64/
 
-- name: add epel repo
+- name: Add repository
   yum_repository:
-    name: epel_repo
+    name: epel
     description: EPEL YUM repo
-    baseurl:  
-      #https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-      #http://dl.fedoraproject.org/pub/epel/epel-release-latest-{{epel_release_major_version}}.noarch.rpm
-      https://download.fedoraproject.org/pub/epel/{{epel_release_major_version}}/x86_64/
+    baseurl: http://download.fedoraproject.org/pub/epel/$releasever/$basearch/
