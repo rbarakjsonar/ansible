@@ -1,6 +1,8 @@
 - name: set sonarw soft and hard number of files limit
-  become: yes
-  lineinfile: dest='/etc/security/limits.conf' line='{{ item }}' state=present
+  lineinfile: dest=/etc/security/limits.conf 
+              line='{{ item.line }}' 
+              state=present
     with_items:
-      'sonarw           soft    nofile          55536'
-      'sonarw           hard    nofile          55536'
+      - ( line: 'sonarw           soft    nofile          55536' }
+      - ( line: 'sonarw           hard    nofile          55536' }
+  become: yes
