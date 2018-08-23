@@ -1,6 +1,8 @@
 - name: Add sonarg needed repos
-  copy: src=files/{{repo}} dest=/etc/yum.repos.d/{{repo}} \
-        owner=root group=root mode=644
+  copy: 
+    src=files/{{ item }} 
+    dest=/etc/yum.repos.d/{{ item }} \
+    owner=root group=root mode=644
   with_items:
     - intel-daal.repo
     - intel-mkl.repo
