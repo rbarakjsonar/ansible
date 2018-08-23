@@ -16,4 +16,5 @@
   yum_repository:
     name: epel
     description: EPEL YUM repo
-    baseurl: http://download.fedoraproject.org/pub/epel/$releasever/$basearch/
+    #baseurl: http://download.fedoraproject.org/pub/epel/$releasever/$basearch/
+    baseurl: https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
