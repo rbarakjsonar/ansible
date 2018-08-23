@@ -1,7 +1,7 @@
-- name: define variables
+- name: define EPEL variables
   set_fact:
-  epel_release_major_version: 7
-  #epel_release_minor_version: 8
+    epel_release_major_version: 7
+    #epel_release_minor_version: 8
 
 - name: add epel repo
   yum_repository:
