@@ -12,17 +12,9 @@
 #rb#      #http://dl.fedoraproject.org/pub/epel/epel-release-latest-{{epel_release_major_version}}.noarch.rpm
 #rb#      https://download.fedoraproject.org/pub/epel/{{epel_release_major_version}}/x86_64/
 
-#so#- name: Add repository
-#so#  yum_repository:
-#so#    name: epel
-#so#    description: EPEL YUM repo
-#so#    #baseurl: http://download.fedoraproject.org/pub/epel/$releasever/$basearch/
-#so#    baseurl: https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-
-- name: add epel repo   
-  tags: addEpelRepo
-  yum: name=https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm state=present
-  register: epelRepoOut
-  notify:
-    - yum update
-- debug: var=epelRepoOut.stdout_lines
+- name: Add repository
+  yum_repository:
+    name: epel
+    description: EPEL YUM repo
+    #baseurl: http://download.fedoraproject.org/pub/epel/$releasever/$basearch/
+    baseurl: https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
