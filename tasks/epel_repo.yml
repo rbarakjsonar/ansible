@@ -21,8 +21,8 @@
 
 - name: add epel repo   
   tags: addEpelRepo
-          yum: name=https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm state=present
-          register: epelRepoOut
-          notify:
-            - yum update
-        - debug: var=epelRepoOut.stdout_lines
+  yum: name=https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm state=present
+  register: epelRepoOut
+  notify:
+    - yum update
+- debug: var=epelRepoOut.stdout_lines
