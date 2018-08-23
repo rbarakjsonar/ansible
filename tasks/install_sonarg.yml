@@ -2,13 +2,13 @@
 
 - name: Install sonarg
   yum: name=sonarg
-  register: logdata
-
-- debug: msg="{{ logdata.stdout }}"
-- local_action: 
-        module: copy 
-        content: "{{ logdata.stdout }}"
-        dest: sonarg-install.out
-
-
-
+#rb#  register: logdata
+#rb#
+#rb#- debug: msg="{{ logdata.stdout }}"
+#rb#- local_action: 
+#rb#        module: copy 
+#rb#        content: "{{ logdata.stdout }}"
+#rb#        dest: sonarg-install.out
+#rb#
+#rb#
+#rb#
