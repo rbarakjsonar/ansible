@@ -9,8 +9,8 @@
     description: EPEL YUM repo
     baseurl:  
       #https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-      #http://dl.fedoraproject.org/pub/epel/epel-release-latest-{{epel_release_major_version}}.noarch.rpm
-      https://download.fedoraproject.org/pub/epel/{{epel_release_major_version}}/x86_64/
+      http://dl.fedoraproject.org/pub/epel/epel-release-latest-{{epel_release_major_version}}.noarch.rpm
+      #https://download.fedoraproject.org/pub/epel/{{epel_release_major_version}}/x86_64/
 
 #rb#- name: Add repository
 #rb#  yum_repository:
