@@ -1,7 +1,8 @@
 # sudo yum -y install sonarg |& tee sonarg-install.out
 
 - name: Install sonarg
-    yum: sonarg
+    yum: 
+      name=sonarg
     register: logdata
 
 - debug: msg="{{ logdata.stdout }}"
