@@ -12,7 +12,7 @@
 #rb#- debug:
 #rb#    msg: "{ test[stdout].split('\n') }}"
 - debug:
-    var={{ test.stdout }}
+    var={{ test }}
 #rb#- debug:
 #rb#    msg: "{ test.stdout }}"
 #rb#- debug: var=test.stdout_lines
