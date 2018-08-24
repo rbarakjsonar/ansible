@@ -7,16 +7,16 @@
   async: 1200
   poll: 5
 - command: echo {{ test }}
-#rb#- debug:
-#rb#    msg: "{{ result }}"
+- debug:
+    msg: "{{ result }}"
 #rb#- debug:
 #rb#    msg: "{ test[stdout].split('\n') }}"
 #rb#- debug:
 #rb#    var={{ test.stdout }}
 #rb#- debug:
 #rb#    msg: "{ test.stdout }}"
-- debug: var=test.stdout_lines
-- debug: var=test.stdout_lines
+#rb#- debug: var=test.stdout_lines
+#rb#- debug: var=test.stdout_lines
 #rb#- debug:
 #rb#    msg: "{{ test.stdout }}"
 - debug:
