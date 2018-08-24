@@ -1,14 +1,22 @@
 - hosts: localhost
-#  become: true
-#  pre_tasks:
-#    - name: update repositories
-#      yum:
-#        name: '*'
-#        state: latest
-#        update_cache: yes
-#      changed_when: False
-
-  tasks:
-    #- include: tasks/kill_running_yum_rpm_processes.yml
-    #- include: tasks/set_security_limits.yml
-    - include: tasks/epel_repo.yml
+	- name: Install sonarg
+	  #yum: name=sonarg
+	  yum: name=perl
+	  register: test
+	  async: 1200
+	  poll: 5
+	- command: echo {{ test }}
+	#rb#- debug:
+	#rb#    msg: "{{ result }}"
+	#rb#- debug:
+	#rb#    msg: "{ test[stdout].split('\n') }}"
+	- debug:
+	    var={{ test }}
+	- debug:
+	    var={{ test.stdout }}
+	#rb#- debug: var=test.stdout_lines
+	#rb#- debug: var=test.stdout_lines
+	#rb#- debug:
+	#rb#    msg: "{{ test.stdout }}"
+	- debug:
+	    msg: "Now do: `sudo sonarg-setup |& tee sonarg-setup.out`"
