@@ -6,6 +6,6 @@
   async: 1200
   poll: 5
 - debug:
-    msg: "{{ out.stdout_lines }}"
+    msg: "{{ out.stdout.split('\n') }}"
 - debug:
     msg: "Now do: `sudo sonarg-setup |& tee sonarg-setup.out`"
