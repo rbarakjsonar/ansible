@@ -2,7 +2,10 @@
 
 - name: Install sonarg
   yum: name=sonarg
+  register: out
   async: 1200
   poll: 5
+- debug:
+    var=out.stdout_lines
 - debug:
     msg: "Now do: `sudo sonarg-setup |& tee sonarg-setup.outi`"
