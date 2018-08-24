@@ -1,2 +1,3 @@
 - name: Remind to execute setup sonarg
+- debug:
   msg: "Now do: `sudo sonarg-setup |& tee sonarg-setup.out`"
