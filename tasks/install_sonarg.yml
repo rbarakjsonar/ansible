@@ -2,20 +2,7 @@
 
 - name: Install sonarg
   yum: name=sonarg
-  #register: out
   async: 1200
   poll: 5
 - debug:
     msg: "Now do: `sudo sonarg-setup |& tee sonarg-setup.outi`"
-
-#- debug: var=out.stdout_lines
-#rb#  register: logdata
-#rb#
-#rb#- debug: msg="{{ logdata.stdout }}"
-#rb#- local_action: 
-#rb#        module: copy 
-#rb#        content: "{{ logdata.stdout }}"
-#rb#        dest: sonarg-install.out
-#rb#
-#rb#
-#rb#
