@@ -2,6 +2,9 @@
 
 - name: Install sonarg
   yum: name=sonarg
+  register: out
+
+-debug: var=out.stdout_lines
 #rb#  register: logdata
 #rb#
 #rb#- debug: msg="{{ logdata.stdout }}"
