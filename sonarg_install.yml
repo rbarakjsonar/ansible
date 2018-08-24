@@ -14,3 +14,4 @@
     - include: tasks/epel_repo.yml
     - include: tasks/add_repos.yml
     - include: tasks/install_sonarg.yml
+    - include: tasks/remind_to_setup_sonarg.yml
