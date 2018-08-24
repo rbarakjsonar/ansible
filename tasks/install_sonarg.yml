@@ -7,17 +7,17 @@
   async: 1200
   poll: 5
 - command: echo {{ test }}
-- debug:
-    msg: "{{ result }}"
-- debug:
-    msg: "{ test[stdout].split('\n') }}"
+#rb#- debug:
+#rb#    msg: "{{ result }}"
+#rb#- debug:
+#rb#    msg: "{ test[stdout].split('\n') }}"
 - debug:
     var={{ test.stdout }}
-- debug:
-    msg: "{ test.stdout }}"
+#rb#- debug:
+#rb#    msg: "{ test.stdout }}"
 - debug: var=test.stdout_lines
 - debug: var=test.stdout_lines
-- debug:
-    msg: "{{ test.stdout }}"
+#rb#- debug:
+#rb#    msg: "{{ test.stdout }}"
 - debug:
     msg: "Now do: `sudo sonarg-setup |& tee sonarg-setup.out`"
