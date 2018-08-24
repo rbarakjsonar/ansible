@@ -11,8 +11,8 @@
 #rb#    msg: "{{ result }}"
 #rb#- debug:
 #rb#    msg: "{ test[stdout].split('\n') }}"
-- debug:
-    var={{ test.stdout }}
+#rb#- debug:
+#rb#    var={{ test.stdout }}
 #rb#- debug:
 #rb#    msg: "{ test.stdout }}"
 - debug: var=test.stdout_lines
