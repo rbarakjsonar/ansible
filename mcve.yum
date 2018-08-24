@@ -1,22 +1,24 @@
-- hosts: localhost
-  - name: Install sonarg
-    #yum: name=sonarg
-    yum: name=perl
-    register: test
-    async: 1200
-    poll: 5
-  - command: echo {{ test }}
-  #rb#- debug:
-  #rb#    msg: "{{ result }}"
-  #rb#- debug:
-  #rb#    msg: "{ test[stdout].split('\n') }}"
-  - debug:
-      var={{ test }}
-  - debug:
-      var={{ test.stdout }}
-  #rb#- debug: var=test.stdout_lines
-  #rb#- debug: var=test.stdout_lines
-  #rb#- debug:
-  #rb#    msg: "{{ test.stdout }}"
-  - debug:
-      msg: "Now do: `sudo sonarg-setup |& tee sonarg-setup.out`"
+- name: Install sonarg
+  hosts: localhost
+  tasks:
+    - name: Install package
+      #yum: name=sonarg
+      yum: name=perl
+      register: test
+      async: 1200
+      poll: 5
+    - command: echo {{ test }}
+    #rb#- debug:
+    #rb#    msg: "{{ result }}"
+    #rb#- debug:
+    #rb#    msg: "{ test[stdout].split('\n') }}"
+    - debug:
+        var={{ test }}
+    - debug:
+        var={{ test.stdout }}
+    #rb#- debug: var=test.stdout_lines
+    #rb#- debug: var=test.stdout_lines
+    #rb#- debug:
+    #rb#    msg: "{{ test.stdout }}"
+    - debug:
+        msg: "Now do: `sudo sonarg-setup |& tee sonarg-setup.out`"
