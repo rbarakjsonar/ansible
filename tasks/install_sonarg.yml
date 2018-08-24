@@ -4,7 +4,7 @@
   yum: name=sonarg
   #register: out
   async: 1200
-  poll: 60
+  poll: 5
 
 #- debug: var=out.stdout_lines
 #rb#  register: logdata
