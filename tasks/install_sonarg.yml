@@ -12,12 +12,5 @@
 - debug: var=out.stdout_lines
 - debug:
     msg: "{{ test.stdout }}"
-- hosts: localhost
-  tasks:
-    - name: Run ls.sh and output "ls /"
-      shell: ls /
-      register: out
-
-
 - debug:
     msg: "Now do: `sudo sonarg-setup |& tee sonarg-setup.out`"
