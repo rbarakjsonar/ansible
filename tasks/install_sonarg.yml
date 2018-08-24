@@ -5,6 +5,8 @@
   #register: out
   async: 1200
   poll: 5
+- debug:
+    msg: "don't forget"
 
 #- debug: var=out.stdout_lines
 #rb#  register: logdata
