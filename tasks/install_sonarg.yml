@@ -3,6 +3,8 @@
 - name: Install sonarg
   yum: name=sonarg
   register: out
+  async: 1200
+  poll: 60
 
 - debug: var=out.stdout_lines
 #rb#  register: logdata
