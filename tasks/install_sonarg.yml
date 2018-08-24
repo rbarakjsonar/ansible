@@ -6,10 +6,10 @@
   register: test
   async: 1200
   poll: 5
-#rb#- debug:
-#rb#    var={{ test[stdout].split('\n') }}
-#rb#- debug:
-#rb#    var={{ test.stdout }}
+- debug:
+    var={{ test[stdout].split('\n') }}
+- debug:
+    var={{ test.stdout }}
 - debug: var=test.stdout_lines
 - debug: var=test.stdout_lines
 - debug:
