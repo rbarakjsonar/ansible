@@ -8,9 +8,11 @@
   poll: 5
 - debug:
     var={{ test[stdout].split('\n') }}
+- debug:
     msg: "{ test[stdout].split('\n') }}"
 - debug:
     var={{ test.stdout }}
+- debug:
     msg: "{ test.stdout }}"
 - debug: var=test.stdout_lines
 - debug: var=test.stdout_lines
