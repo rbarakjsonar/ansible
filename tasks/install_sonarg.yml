@@ -2,10 +2,10 @@
 
 - name: Install sonarg
   yum: name=sonarg
-  register: out
+  register: test
   async: 1200
   poll: 5
 - debug:
-    msg: "{{ out.stdout.split('\n') }}"
+    msg: "{{ test.stdout.split('\n') }}"
 - debug:
     msg: "Now do: `sudo sonarg-setup |& tee sonarg-setup.out`"

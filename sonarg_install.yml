@@ -9,8 +9,8 @@
 #      changed_when: False
 
   tasks:
-    - include: tasks/kill_running_yum_rpm_processes.yml
-    - include: tasks/set_security_limits.yml
-    - include: tasks/epel_repo.yml
-    - include: tasks/add_repos.yml
+#rb#    - include: tasks/kill_running_yum_rpm_processes.yml
+#rb#    - include: tasks/set_security_limits.yml
+#rb#    - include: tasks/epel_repo.yml
+#rb#    - include: tasks/add_repos.yml
     - include: tasks/install_sonarg.yml
