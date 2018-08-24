@@ -1,4 +1,4 @@
-- name: set sonarw soft and hard number of files limit
+- name: Set sonarw soft and hard number of files limit
   lineinfile: 
     dest=/etc/security/limits.conf 
     line='{{ item }}' 

@@ -1,4 +1,4 @@
-- name: define EPEL variables
+- name: Define EPEL variables
   set_fact:
     epel_release_major_version: 7
     #epel_release_minor_version: 8
