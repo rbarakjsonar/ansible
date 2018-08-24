@@ -1,4 +1,4 @@
-- name: Install sonarg
+- name: MCVE
   hosts: localhost
   tasks:
     - name: Install package
