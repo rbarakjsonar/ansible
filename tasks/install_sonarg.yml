@@ -6,6 +6,7 @@
   register: test
   async: 1200
   poll: 5
+- command: echo {{ test }}
 - debug:
     msg: "{{ result }}"
 - debug:
