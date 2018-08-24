@@ -7,7 +7,7 @@
   async: 1200
   poll: 5
 - debug:
-    var={{ test[stdout].split('\n') }}
+    var=result
 - debug:
     msg: "{ test[stdout].split('\n') }}"
 - debug:
