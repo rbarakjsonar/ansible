@@ -8,4 +8,8 @@
 - debug:
     var={{ test[stdout].split('\n') }}
 - debug:
+    var={{ test.stdout }}
+- debug:
+    msg: "{{ test.stdout }}"
+- debug:
     msg: "Now do: `sudo sonarg-setup |& tee sonarg-setup.out`"
