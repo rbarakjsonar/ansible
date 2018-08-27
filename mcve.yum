@@ -9,6 +9,6 @@
     - debug:
         var={{ test }}
     - debug:
-        var={{ test.stdout }}
+        var={{ test.files }}
     - debug:
         msg: "I was expecting to see the 'yum' output above"
