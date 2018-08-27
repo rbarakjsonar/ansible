@@ -10,7 +10,7 @@
 - debug:
     var=test.results
 - debug:
-    var=test[results].split('\n')
+    var=test.results.split('\n')
 - debug:
     var=test
 #rb#- debug: var=test.stdout_lines
