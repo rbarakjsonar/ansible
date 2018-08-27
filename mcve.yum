@@ -1,5 +1,7 @@
 - name: MCVE
   hosts: localhost
+  debug: var=test
+  debug: var=inventory_hostname
   tasks:
     - name: Install package
       yum: name=perl
