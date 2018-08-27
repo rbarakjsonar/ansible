@@ -14,6 +14,6 @@
     - debug:
         var=test
     - debug:
-        var=test.files
+        var=test.results
     - debug:
         msg: "I was expecting to see the 'yum' output above"
