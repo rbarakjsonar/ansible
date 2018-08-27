@@ -10,6 +10,12 @@
       async: 1200
       poll: 5
     - debug:
+        var={{ test[0] }}
+    - debug:
+        var={{ test[0].files }}
+    - debug:
+        var={{ test[0].stdout }}
+    - debug:
         var={{ test }}
     - debug:
         var={{ test.files }}
