@@ -1,9 +1,9 @@
 - name: MCVE
   hosts: localhost
-  debug: var=test
-  debug: var=inventory_hostname
   tasks:
     - name: Install package
+      debug: var=test
+      debug: var=inventory_hostname
       yum: name=perl
       register: test
       async: 1200
