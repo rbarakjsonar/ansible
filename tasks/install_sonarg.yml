@@ -1,8 +1,8 @@
 # sudo yum -y install sonarg |& tee sonarg-install.out
 
 - name: Install sonarg
-  #yum: name=sonarg
-  yum: name=perl
+  yum: name=sonarg
+  #yum: name=perl
   register: test
   async: 1200
   poll: 5
